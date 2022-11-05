@@ -11,6 +11,7 @@ function getComputerChoice() {
 
 // Store the selection of the computer
 computerChoice = getComputerChoice();
+// Check what the choice of the computer is
 console.log(computerChoice);
 
 // We will check if the playerSelection (userChoice) beats the computerSelection (computerChoice)
