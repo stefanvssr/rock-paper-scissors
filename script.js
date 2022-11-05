@@ -1,18 +1,10 @@
 let computerChoice;
 
-// Store the input of the user and make the input of the user lowercase
-let userChoice = prompt("Make your choice: Rock, Paper or Scissor").toLowerCase();
-
 // The computer randomly makes a choice between rock, paper or scissors
 function getComputerChoice() {
     const computerChoices = ["rock", "paper", "scissors"];
     return computerChoices[Math.floor(Math.random() * computerChoices.length)];
 }
-
-// Store the selection of the computer
-computerChoice = getComputerChoice();
-// Check what the choice of the computer is
-console.log(computerChoice);
 
 // We will check if the playerSelection (userChoice) beats the computerSelection (computerChoice)
 function playRound(playerSelection, computerSelection) {
@@ -38,4 +30,23 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(userChoice, computerChoice));
+
+function game() {
+
+    // This loop will play 5 times. So we play a 5 round game
+    for(let i = 0; i < 5; i++) {
+        // Store the input of the user and make the input of the user lowercase
+        let userChoice = prompt("Make your choice: Rock, Paper or Scissor").toLowerCase();
+
+        // Store the selection of the computer
+        computerChoice = getComputerChoice();
+        // Check what the choice of the computer is
+        console.log(computerChoice);
+        
+        // Call the playGround function
+        console.log(playRound(userChoice, computerChoice));
+    }
+
+}
+
+game();
