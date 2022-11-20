@@ -49,39 +49,35 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
 
-    // This loop will play 5 times. So we play a 5 round game
-    for(let i = 0; i < 5; i++) {
-        // Store the input of the user and make the input of the user lowercase
-        let userChoice = prompt("Make your choice: Rock, Paper or Scissor").toLowerCase();
+    // Store the input of the user and make the input of the user lowercase
+    let userChoice = prompt("Make your choice: Rock, Paper or Scissor").toLowerCase();
 
-        // Store the selection of the computer
-        computerChoice = getComputerChoice();
-        // Check what the choice of the computer is
-        console.log(computerChoice);
-        
-        // Call the playGround function and store the return values in a variable
-        let results = playRound(userChoice, computerChoice);
-        let resultText = results[0];
-        let resultNumber = results[1];
+    // Store the selection of the computer
+    computerChoice = getComputerChoice();
+    // Check what the choice of the computer is
+    console.log(computerChoice);
+    
+    // Call the playGround function and store the return values in a variable
+    let results = playRound(userChoice, computerChoice);
+    let resultText = results[0];
+    let resultNumber = results[1];
 
-        console.log(resultText);
+    console.log(resultText);
 
-        if (resultNumber === 1) {
-            userScore++
-        } else if (resultNumber === 0) {
-            computerScore++
-        } else {
-            i--;
-        }
+    if (resultNumber === 1) {
+        userScore++
+    } else if (resultNumber === 0) {
+        computerScore++
+    } else {
+        i--;
+    }
 
-        console.log(userScore);
+    console.log(userScore);
 
-        if ( i === 4 && userScore > computerScore ) {
-            console.log("You Win!");
-        } else if ( i === 4 && userScore < computerScore ) {
-            console.log("You Lose!");
-        }
-
+    if ( i === 4 && userScore > computerScore ) {
+        console.log("You Win!");
+    } else if ( i === 4 && userScore < computerScore ) {
+        console.log("You Lose!");
     }
 
 }
